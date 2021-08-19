@@ -1,0 +1,10 @@
+[Unit]
+Description=ufw-ssh-switch
+
+[Timer]
+OnUnitActiveSec=120s
+OnBootSec=60s
+
+[Install]
+WantedBy=timers.target
+

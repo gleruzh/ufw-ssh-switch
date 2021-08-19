@@ -1,0 +1,13 @@
+[Unit]
+Description=Service to check ALLOWEDIP for SSH ACCESS and MODIFY if changed
+After=multi-user.target
+StartLimitIntervalSec=120s
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ufw_ssh_switch.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
